@@ -36,10 +36,13 @@ gem "thruster", require: false
 # gem "rack-cors"
 gem 'graphql'
 
+group :development do
+  gem 'graphiql-rails'
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-  gem 'graphiql-rails'
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
