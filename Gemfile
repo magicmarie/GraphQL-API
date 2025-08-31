@@ -34,10 +34,10 @@ gem "thruster", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
-gem 'graphql'
+gem "graphql"
 
 group :development do
-  gem 'graphiql-rails'
+  gem "graphiql-rails"
 end
 
 group :development, :test do

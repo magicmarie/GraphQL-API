@@ -3,11 +3,11 @@ module Mutations
     argument :id, ID, required: true
 
     field :success, Boolean, null: false
-    field :errors, [String], null: false
+    field :errors, [ String ], null: false
 
     def resolve(id:)
       book = Book.find_by(id: id)
-      return { success: false, errors: ["Book not found"] } unless book
+      return { success: false, errors: [ "Book not found" ] } unless book
 
       if book.destroy
         { success: true, errors: [] }

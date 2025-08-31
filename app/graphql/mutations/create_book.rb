@@ -6,7 +6,7 @@ module Mutations
     argument :author_id, ID, required: true
 
     field :book, Types::BookType, null: true
-    field :errors, [String], null: false
+    field :errors, [ String ], null: false
 
     def resolve(title:, author_id:)
       book = Book.new(title: title, author_id: author_id)
@@ -18,4 +18,3 @@ module Mutations
     end
   end
 end
-

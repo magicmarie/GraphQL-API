@@ -5,7 +5,7 @@ module Mutations
     argument :name, String, required: true
 
     field :author, Types::AuthorType, null: true
-    field :errors, [String], null: false
+    field :errors, [ String ], null: false
 
     def resolve(name:)
       author = Author.new(name: name)

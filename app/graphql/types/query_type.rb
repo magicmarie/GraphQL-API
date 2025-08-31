@@ -2,12 +2,12 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :authors, [Types::AuthorType], null: false
+    field :authors, [ Types::AuthorType ], null: false
     def authors
       Author.all
     end
 
-    field :books, [Types::BookType], null: false
+    field :books, [ Types::BookType ], null: false
     def books
       Book.all
     end

@@ -5,11 +5,11 @@ module Mutations
     argument :authorId, ID, required: false, as: :author_id
 
     field :book, Types::BookType, null: true
-    field :errors, [String], null: false
+    field :errors, [ String ], null: false
 
     def resolve(id:, title: nil, author_id: nil)
       book = Book.find_by(id: id)
-      return { book: nil, errors: ["Book not found"] } unless book
+      return { book: nil, errors: [ "Book not found" ] } unless book
 
       updates = {}
       updates[:title] = title unless title.nil?
